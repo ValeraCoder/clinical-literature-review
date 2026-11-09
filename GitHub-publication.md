@@ -1,69 +1,63 @@
-# Карточка Research для GitHub
+# Research on GitHub
 
-## Поля About
+## Repository details
 
-| Поле GitHub | Текст |
+| Field | Value |
 | --- | --- |
-| Repository name | `research` |
-| Description | Я собираю и сверяю исследования по клинической психологии, психиатрии и эрготерапии. Здесь мои обзоры, методика поиска и инструкция для Codex, чтобы можно было повторить поиск и проверить выводы по оригиналам. |
+| Repository | [ValeraCoder/clinical-literature-review](https://github.com/ValeraCoder/clinical-literature-review) |
+| Description | My literature search and review workflow for clinical psychology, psychiatry, and occupational therapy, with source-linked reviews, templates, and a Codex skill |
 | Website | https://psihoprosnik.online/ |
-| Topics | `clinical-psychology`, `occupational-therapy`, `psychiatry`, `mental-health`, `literature-review`, `research-methodology`, `psychometrics` |
+| Topics | `clinical-psychology`, `occupational-therapy`, `psychiatry`, `mental-health`, `literature-review`, `literature-search`, `research-methodology`, `psychometrics`, `evidence-based-practice`, `evidence-synthesis`, `adhd`, `codex`, `agent-skills` |
+| Release | [Research v0.2.0](https://github.com/ValeraCoder/clinical-literature-review/releases/tag/v0.2.0) |
 
-## Развёрнутое описание для выпуска Research v0.2.0
+I built Research to keep track of how I reach a conclusion from the literature. When I read that a treatment “helps,” I want to know what changed, who measured it, and how long the change lasted. Those details matter when I use a paper in my work as a clinical psychologist and occupational therapist
 
-### Зачем я сделал Research
+For example, my review of Work-MAP, Cog-Fun A, and CBT for adults with ADHD looks separately at symptom severity and how people manage everyday tasks. One study asked participants to rate their performance on work tasks they had chosen. Another measured symptoms. The review keeps those outcomes separate and links to the original sources so you can check my reading [Adult ADHD and occupational therapy](https://github.com/ValeraCoder/clinical-literature-review/blob/v0.2.0/reviews/adult-adhd-occupational-therapy/README.md)
 
-В статьях про психическое здоровье часто встречается фраза «метод помогает». Мне в таких случаях хочется спросить, что именно изменилось и кто это измерил. Участник стал лучше справляться с делами дома? Изменился балл по шкале? Эффект сохранился через несколько месяцев? В работе клинического психолога и эрготерапевта от этих деталей зависит, какой вывод я могу сделать из статьи.
+## What’s included
 
-Research вырос из чата, в котором я собирал литературу для таких вопросов. Здесь я выкладываю свои обзоры и порядок работы, по которому можно провести свой поиск. Например, в обзоре по СДВГ у взрослых я разобрал Work-MAP, Cog-Fun A и КПТ. В одной работе участники сами оценивали выполнение выбранных рабочих задач, в другой исследователи смотрели на выраженность симптомов. Если оставить только фразу «стало лучше», это различие пропадёт. [Обзор по СДВГ и эрготерапии](https://github.com/ValeraCoder/research/blob/main/reviews/adult-adhd-occupational-therapy/README.md)
+- Four source-linked reviews covering adult ADHD and occupational therapy, autism and ADHD, bright-light therapy and depression, and borderline personality disorder [Review index](https://github.com/ValeraCoder/clinical-literature-review/blob/v0.2.0/README.md)
+- A search guide, a search log template, and a source card for recording what a paper measured and where to check it [Search guide](https://github.com/ValeraCoder/clinical-literature-review/blob/v0.2.0/docs/search-guide.md) · [Search log](https://github.com/ValeraCoder/clinical-literature-review/blob/v0.2.0/templates/search-log.md) · [Source card](https://github.com/ValeraCoder/clinical-literature-review/blob/v0.2.0/templates/source-card.md)
+- A Codex skill for running the workflow with the materials and tools available in your session [Research Literature skill](https://github.com/ValeraCoder/clinical-literature-review/blob/v0.2.0/.agents/skills/research-literature/SKILL.md)
 
-Я пользуюсь этим подходом, когда готовлю материал для занятия, возвращаюсь к старому вопросу или хочу проверить цифру перед публикацией. По журналу видно, где искал, что удалось прочитать и на чём держится вывод. Можно открыть нужную таблицу и понять, согласны ли вы с моей трактовкой.
+The reviews and guides in this repository are in Russian
 
-### Как пользоваться
+## Quick start
 
-| Задача | Что выбрать | Что получится |
+| I want to… | Mode | What I get |
 | --- | --- | --- |
-| Хочу разобраться в новой теме | **Поиск** | Подборка статей, краткий ответ и вопросы, по которым данных пока мало |
-| У меня есть несколько работ или я хочу сравнить подходы | **Обзор** | Сопоставление выборок, методов и результатов с указанием ограничений |
-| Хочу проверить число, метод или цитату из конкретной статьи | **Разбор** | Ответ по указанной статье с точным местом в тексте и отметкой о доступе |
+| Get oriented on a new topic | **Search** | Relevant papers, a brief answer, and questions the available evidence leaves open |
+| Compare studies or approaches | **Review** | A comparison of study populations, methods, outcomes, and limitations |
+| Verify a figure, method, or quotation | **Single-source analysis** | An answer tied to a passage or table, with a note on which parts of the source were accessible |
 
-В Codex я открываю папку репозитория и пишу `$research-literature`, затем указываю, что хочу получить. Вот как я формулирую запросы.
+In Codex, I open the repository folder and invoke `$research-literature` with a request like one of these
 
 ```text
-$research-literature Поиск + веб: найди исследования эрготерапии при СДВГ у взрослых с результатами по делам дома или на работе.
-$research-literature Обзор + веб: сопоставь Work-MAP, Cog-Fun A и КПТ при СДВГ у взрослых. Покажи отдельно, что известно о повседневных навыках и симптомах.
-$research-literature Разбор: https://doi.org/10.1177/15394492231159902 — кто вошёл в анализ и что измеряли через три месяца?
+$research-literature Search + web: Find studies of occupational therapy for adults with ADHD that report outcomes for daily tasks at home or at work
+$research-literature Review + web: Compare Work-MAP, Cog-Fun A, and CBT for adults with ADHD. Report daily functioning and symptom outcomes separately
+$research-literature Analyze this paper: https://doi.org/10.1177/15394492231159902 — who was included in the analysis, and what did the researchers measure at three months?
 ```
 
-Без Codex можно взять тот же вопрос, искать в доступных базах и записывать запросы, ссылки и решения в журнал. Для отдельной статьи я сохраняю карточку с выборкой, исходом и нужной таблицей. [Руководство по поиску](https://github.com/ValeraCoder/research/blob/main/docs/search-guide.md) · [Шаблон журнала](https://github.com/ValeraCoder/research/blob/main/templates/search-log.md) · [Карточка источника](https://github.com/ValeraCoder/research/blob/main/templates/source-card.md)
+You can also follow the workflow by hand. Search the databases you can access and record your queries, sources, and decisions in the log. I use the source card to save the study population, the outcome, and the table or passage behind a claim
 
-### Где я ищу
+## Search coverage
 
-В рабочем чате я ищу по словам и по смыслу в своей библиотеке. Если вопрос связан с развитием термина или метода, подключаю исторические материалы. Для новых исследований, регистрации испытаний и действующих рекомендаций использую научные базы и открытый веб. Когда нужно проверить прежнюю редакцию страницы, добавляю `+ архив`. Запросы на разных языках записываю отдельно. В обзоре по СДВГ у взрослых я использовал семь языков.
+In my own setup, I search a local library by keyword and by meaning. I use historical materials to trace how a term or method developed. For new studies, trial registrations, and current guidelines, I use scholarly databases and the open web. When I need an earlier version of a page, I check a web archive and record what I could access
 
-Публичная версия содержит мой порядок работы и инструкцию для Codex. Она работает с доступными в вашем сеансе инструментами и материалами. Частная библиотека и её индексы относятся к моей рабочей установке. [Техническое описание поиска](https://github.com/ValeraCoder/research/blob/main/docs/how-it-works.md)
+I log searches in different languages separately. The adult ADHD review includes queries in seven languages. This release contains the workflow and the materials needed to follow it with sources you can access. I maintain the private library and its indexes in my own setup [How the search works](https://github.com/ValeraCoder/clinical-literature-review/blob/v0.2.0/docs/how-it-works.md) · [Adult ADHD search log](https://github.com/ValeraCoder/clinical-literature-review/blob/v0.2.0/reviews/adult-adhd-occupational-therapy/search-log.md)
 
-Для настройки я использовал идеи из Deep Research и ECC, Nature Paper X-Ray для чтения статей и отдельные материалы по психометрии для проверки шкал. Scholar подключал как дополнительный источник. При проверке настройки поисковая страница остановилась на CAPTCHA. Для обзора по СДВГ у взрослых я использовал другие базы. В отдельном разделе я расписал, что пригодилось в реальной работе, что проверялось на учебных примерах и откуда взяты инструкции. [Инструменты и исходные репозитории](https://github.com/ValeraCoder/research/blob/main/docs/tools-and-credits.md)
+## Credits
 
-### Обо мне
+I drew on Deep Research and ECC when setting up the workflow, used Nature Paper X-Ray for close reading, and consulted psychometrics resources to assess measurement scales. I tried Google Scholar during setup, where a CAPTCHA stopped the test. For the adult ADHD review, I used other databases. The credits document distinguishes the tools I used in reviews from those I configured or tested [Tools and source repositories](https://github.com/ValeraCoder/clinical-literature-review/blob/v0.2.0/docs/tools-and-credits.md)
 
-Я **Дмитрий Тимошенко**, клинический психолог, эрготерапевт и лицензированный медицинский специалист. Я веду Research как независимый образовательный проект. Мои обзоры помогают разобраться в исследованиях. Для диагностики и выбора лечения нужна индивидуальная оценка.
+## Support
 
-[Мой сайт](https://psihoprosnik.online/) · [Лаборатория инструментов](https://psihoprosnik.online/laboratory.html) · [MimirLab](https://psihoprosnik.online/mimirlab.html) · [Modus](https://psihoprosnik.online/modus/) · [EMDR_free](https://psihoprosnik.online/emdr-free/)
+If you’d like to support my work on Research, you can find me on [Boosty](https://boosty.to/lususnaturaes)
 
-[Написать мне в Telegram](https://t.me/yahochushaslik) · [Бот «Психопросник»](https://t.me/psihoprosnikbot) · [GitHub](https://github.com/ValeraCoder)
+## Author
 
----
+I’m **Dmitry Timoshenko**, a clinical psychologist, occupational therapist, and licensed healthcare professional. I run Research as an independent educational project and share these reviews to help readers understand the evidence. Diagnosis and treatment decisions require an individual assessment
 
-## Как разместить на GitHub
+[My website](https://psihoprosnik.online/) · [Tools lab](https://psihoprosnik.online/laboratory.html) · [MimirLab](https://psihoprosnik.online/mimirlab.html) · [Modus](https://psihoprosnik.online/modus/) · [EMDR_free](https://psihoprosnik.online/emdr-free/)
 
-1. Создайте пустой репозиторий `ValeraCoder/research` с нужной видимостью. Заполните Description, Website и Topics из таблицы.
-2. Из готовой папки репозитория отправьте ветку `main` и тег версии.
-
-   ```sh
-   git remote add origin https://github.com/ValeraCoder/research.git
-   git push -u origin main
-   git push origin v0.2.0
-   ```
-
-3. Откройте **Releases**, выберите тег `v0.2.0` и задайте заголовок **Research v0.2.0**. В поле **Describe this release** скопируйте текст от «Зачем я сделал Research» до конца раздела «Обо мне». [Создание репозитория](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository) · [Оформление выпуска](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
+[Contact me on Telegram](https://t.me/yahochushaslik) · [Psihoprosnik bot](https://t.me/psihoprosnikbot) · [GitHub](https://github.com/ValeraCoder)

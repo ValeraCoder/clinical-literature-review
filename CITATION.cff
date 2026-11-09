@@ -7,7 +7,7 @@ authors:
     website: "https://psihoprosnik.online/"
 abstract: "Методика поиска и проверки научной литературы, тематические обзоры и шаблоны журналов поиска."
 version: "0.2.0"
-repository: "https://github.com/ValeraCoder/research"
+repository: "https://github.com/ValeraCoder/clinical-literature-review"
 preferred-citation:
   type: report
   title: "Research — клиническая психология и эрготерапия"
@@ -16,4 +16,4 @@ preferred-citation:
       family-names: "Тимошенко"
   version: "0.2.0"
   year: 2026
-  url: "https://github.com/ValeraCoder/research"
+  url: "https://github.com/ValeraCoder/clinical-literature-review"
