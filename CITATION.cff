@@ -1,0 +1,19 @@
+cff-version: "1.2.0"
+title: "Research — клиническая психология и эрготерапия"
+message: "Если вы используете материалы Research, укажите конкретный обзор и ссылку на его редакцию."
+authors:
+  - given-names: "Дмитрий"
+    family-names: "Тимошенко"
+    website: "https://psihoprosnik.online/"
+abstract: "Методика поиска и проверки научной литературы, тематические обзоры и шаблоны журналов поиска."
+version: "0.2.0"
+repository: "https://github.com/ValeraCoder/research"
+preferred-citation:
+  type: report
+  title: "Research — клиническая психология и эрготерапия"
+  authors:
+    - given-names: "Дмитрий"
+      family-names: "Тимошенко"
+  version: "0.2.0"
+  year: 2026
+  url: "https://github.com/ValeraCoder/research"
